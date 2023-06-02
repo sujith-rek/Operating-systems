@@ -1,0 +1,24 @@
+Author : P.Soma Sujith
+Roll Number : 2110110400
+NetID : ps335
+
+===================================> Custom Shell <===================================
+
+This Shell implements almost every executable commands on the system
+Just type the command you want to at the '$' prompt
+
+==> Background Execution
+If you want to send a process to the background type '&' at the end of the command
+--> When background process completes, it'll print status to terminal.
+
+==> Quit the shell
+To exit the shell, you need to use the command "exit"
+
+==> Exit the current running process
+To quit the current working command on shell use Ctrl+C (^C)
+
+==> Serial Foreground Execution
+To run multiple commands one after another, you can use "&&" seperating the two commands
+
+==> Parallel Foreground Execution
+To run multiple commands at once, you can use "&&&" seperating the two commands

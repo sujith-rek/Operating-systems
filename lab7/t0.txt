@@ -1,0 +1,19 @@
+
+Try writing and reading 17s to various addresses...
+   Successfully wrote and read 17 at address 42.
+   Successfully wrote and read 17 at address 384888.
+   Successfully wrote and read 17 at address 23894788.
+
+Try writing and reading array of 10000 chars to various addresses...
+   Successfully wrote and read array at address 42.
+   Successfully wrote and read array at address 384888.
+   Successfully wrote and read array at address 23894788.
+
+Try to read and write all of virtual memory...
+   Successful.
+
+Try filling physical memory, then try to write more...
+   Wrote enough data to almost fill physical memory.
+   Attempting to write more than should fit in remaining memory...
+   Wrote expected amount of data before failure.
+   Successful.

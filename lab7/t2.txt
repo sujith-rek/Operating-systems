@@ -1,0 +1,74 @@
+
+Note: in these tests, a 'page fault' means that a put request did not write
+as many bytes as requested.  A 'read fault' means that a get request did not
+read as many bytes as requested.  A 'bad read' means that a get read the right
+numbers of bytes, but the value that was read was not the same as what was written.
+
+
+
+Running 4 threads, each writing all of their memory 5 times with each
+of 5 page tables.  Since this can fill but never overfill physical memory,
+there should be NO page faults, read faults, or bad reads.
+
+
+   Started 4 threads.
+
+   Thread  0 finished with 0 page faults,  0 read faults, 0 bad reads
+   Thread  1 finished with 0 page faults,  0 read faults, 0 bad reads
+   Thread  2 finished with 0 page faults,  0 read faults, 0 bad reads
+   Thread  3 finished with 0 page faults,  0 read faults, 0 bad reads
+
+
+
+Now run 16 threads, each writing 1/4 of their memory 5 times with each
+of 10 page tables.  Since this can fill but never overfill physical memory,
+there should again be NO page faults, read faults, or bad reads.
+
+
+   Started 16 threads.
+
+   Thread  0 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread  1 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread  2 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread  3 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread  4 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread  5 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread  6 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread  7 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread  8 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread  9 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread 10 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread 11 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread 12 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread 13 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread 14 finished with 0 page faults,  0 read faults,  0 bad reads
+   Thread 15 finished with 0 page faults,  0 read faults,  0 bad reads
+
+
+
+Now repeat with 17 threads.  Since this can overfill overfill physical
+memory, there WILL LIKELY be page faults, but there should still be NO
+read faults, or bad reads.
+
+
+   Started 17 threads.
+
+   Thread  0 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread  1 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread  2 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread  3 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread  4 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread  5 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread  6 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread  7 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread  8 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread  9 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread 10 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread 11 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread 12 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread 13 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread 14 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread 15 finished with 50 page faults,  0 read faults,  0 bad reads
+   Thread 16 finished with 50 page faults,  0 read faults,  0 bad reads
+
+

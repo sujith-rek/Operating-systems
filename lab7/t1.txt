@@ -1,0 +1,29 @@
+
+Storing data using 8 page tables...
+   0. Store of 102777 values succeeded.
+   1. Store of 48335 values succeeded.
+   2. Store of 26649 values succeeded.
+   3. Store of 100027 values succeeded.
+   4. Store of 107763 values succeeded.
+   5. Store of 93426 values succeeded.
+   6. Store of 15211 values succeeded.
+   7. Store of 66429 values succeeded.
+
+Reading back the data...
+   0. Read of 102777 values succeeded.
+   1. Read of 48335 values succeeded.
+   2. Read of 26649 values succeeded.
+   3. Read of 100027 values succeeded.
+   4. Read of 107763 values succeeded.
+   5. Read of 93426 values succeeded.
+   6. Read of 15211 values succeeded.
+   7. Read of 66429 values succeeded.
+
+Writing interleaved data using 8 page tables...
+   Data written successfully.  Reading back data...
+   Successful.
+
+Discarding half of the page tables...
+
+Creating another page table, then writing and reading lots of data...
+   Successful.

@@ -1,6 +1,6 @@
 # Operating-systems
 The labs which i did during my operating system course
-
+used Ubuntu in lab and Kali in my laptop with C, bash
 ## Lab1
 basic linux commands
 
